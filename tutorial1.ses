@@ -1,0 +1,164 @@
+
+(session tutorial1.ses
+  (base_design tutorial1.dsn)
+  (placement
+    (resolution um 10)
+    (component LEDs:LED_0603_HandSoldering
+      (place D1 1690000 -1100000 front 90)
+    )
+    (component "Connectors_Molex:Molex_PicoBlade_53261-0371_03x1.25mm_Angled"
+      (place J1 1640000 -1190000 front 0)
+    )
+    (component Resistors_SMD:R_0603_HandSoldering
+      (place R1 1680000 -1150000 front 90)
+      (place R2 1590000 -1100000 front 270)
+    )
+    (component "Housings_SSOP:SSOP-8_2.95x2.8mm_Pitch0.65mm"
+      (place U1 1640000 -1120000 front 0)
+    )
+  )
+  (was_is
+  )
+  (routes 
+    (resolution um 10)
+    (parser
+      (host_cad "KiCad's Pcbnew")
+      (host_version 4.0.7)
+    )
+    (library_out 
+      (padstack "Via[0-1]_600:400_um"
+        (shape
+          (circle F.Cu 6000 0 0)
+        )
+        (shape
+          (circle B.Cu 6000 0 0)
+        )
+        (attach off)
+      )
+    )
+    (network_out 
+      (net "Net-(D1-Pad1)"
+        (wire
+          (path F.Cu 2500
+            1690000 -1111000
+            1681747 -1111000
+          )
+        )
+        (wire
+          (path F.Cu 2500
+            1657000 -1116750
+            1675997 -1116750
+            1681747 -1111000
+          )
+        )
+      )
+      (net "Net-(D1-Pad2)"
+        (wire
+          (path F.Cu 2500
+            1590000 -1089000
+            1690000 -1089000
+          )
+        )
+      )
+      (net VCC
+        (wire
+          (path F.Cu 2500
+            1623000 -1110250
+            1611247 -1110250
+          )
+        )
+        (wire
+          (path F.Cu 2500
+            1611002 -1111000
+            1611002 -1146749
+            1627500 -1163247
+          )
+        )
+        (wire
+          (path F.Cu 2500
+            1611247 -1110250
+            1611247 -1110755
+            1611002 -1111000
+          )
+        )
+        (wire
+          (path F.Cu 2500
+            1611002 -1111000
+            1598253 -1111000
+          )
+        )
+        (wire
+          (path F.Cu 2500
+            1627500 -1175500
+            1627500 -1163247
+          )
+        )
+        (wire
+          (path F.Cu 2500
+            1590000 -1111000
+            1598253 -1111000
+          )
+        )
+      )
+      (net "Net-(J1-Pad2)"
+        (wire
+          (path F.Cu 2500
+            1640000 -1175500
+            1640000 -1187753
+          )
+        )
+        (wire
+          (path F.Cu 2500
+            1680000 -1161000
+            1680000 -1170753
+          )
+        )
+        (wire
+          (path F.Cu 2500
+            1680000 -1170753
+            1675602 -1170753
+            1658602 -1187753
+            1640000 -1187753
+          )
+        )
+      )
+      (net GND
+        (wire
+          (path F.Cu 2500
+            1657000 -1110250
+            1645247 -1110250
+          )
+        )
+        (wire
+          (path F.Cu 2500
+            1645247 -1110250
+            1645247 -1146305
+            1652500 -1153558
+            1652500 -1175500
+          )
+        )
+      )
+      (net /Input
+        (wire
+          (path F.Cu 2500
+            1680000 -1139000
+            1671747 -1139000
+          )
+        )
+        (wire
+          (path F.Cu 2500
+            1657000 -1123250
+            1668753 -1123250
+          )
+        )
+        (wire
+          (path F.Cu 2500
+            1668753 -1123250
+            1668753 -1136006
+            1671747 -1139000
+          )
+        )
+      )
+    )
+  )
+)

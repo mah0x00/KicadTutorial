@@ -1,0 +1,2033 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:microchip_pic16mcu
+LIBS:microchip_pic12mcu
+LIBS:tutorial1-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Tutorial 1"
+Date "2018-03-03"
+Rev "1.0"
+Comp "Tinker"
+Comment1 "Author: MAH"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L R R2
+U 1 1 5A9AB759
+P 7250 3000
+F 0 "R2" V 7330 3000 50  0000 C CNN
+F 1 "1k" V 7250 3000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 7180 3000 50  0001 C CNN
+F 3 "" H 7250 3000 50  0001 C CNN
+	1    7250 3000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED_ALT D1
+U 1 1 5A9AB826
+P 6750 3000
+F 0 "D1" H 6750 3100 50  0000 C CNN
+F 1 "Red" H 6750 2900 50  0000 C CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 6750 3000 50  0001 C CNN
+F 3 "" H 6750 3000 50  0001 C CNN
+	1    6750 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 5A9AB8D8
+P 5850 4950
+F 0 "R1" V 5930 4950 50  0000 C CNN
+F 1 "100" V 5850 4950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 5780 4950 50  0001 C CNN
+F 3 "" H 5850 4950 50  0001 C CNN
+	1    5850 4950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Conn_01x03 J1
+U 1 1 5A9AB938
+P 4850 4950
+F 0 "J1" H 4850 5150 50  0000 C CNN
+F 1 "Conn_01x03" H 4850 4750 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_PicoBlade_53261-0371_03x1.25mm_Angled" H 4850 4950 50  0001 C CNN
+F 3 "" H 4850 4950 50  0001 C CNN
+	1    4850 4950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L PIC12C508A-I/SN U1
+U 1 1 5A9ABAD4
+P 5750 3600
+F 0 "U1" H 5200 4150 50  0000 L CNN
+F 1 "PIC12C508A-I/SN" H 5200 4050 50  0000 L CNN
+F 2 "Housings_SSOP:SSOP-8_2.95x2.8mm_Pitch0.65mm" H 5750 3600 50  0001 C CNN
+F 3 "" H 5750 3600 50  0001 C CNN
+	1    5750 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR01
+U 1 1 5A9ABDBB
+P 4800 3200
+F 0 "#PWR01" H 4800 3050 50  0001 C CNN
+F 1 "VCC" H 4800 3350 50  0000 C CNN
+F 2 "" H 4800 3200 50  0001 C CNN
+F 3 "" H 4800 3200 50  0001 C CNN
+	1    4800 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 5A9ABE72
+P 4800 4000
+F 0 "#PWR02" H 4800 3750 50  0001 C CNN
+F 1 "GND" H 4800 3850 50  0000 C CNN
+F 2 "" H 4800 4000 50  0001 C CNN
+F 3 "" H 4800 4000 50  0001 C CNN
+	1    4800 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG03
+U 1 1 5A9AC013
+P 3450 2650
+F 0 "#FLG03" H 3450 2725 50  0001 C CNN
+F 1 "PWR_FLAG" H 3450 2800 50  0000 C CNN
+F 2 "" H 3450 2650 50  0001 C CNN
+F 3 "" H 3450 2650 50  0001 C CNN
+	1    3450 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG04
+U 1 1 5A9AC03E
+P 4050 2650
+F 0 "#FLG04" H 4050 2725 50  0001 C CNN
+F 1 "PWR_FLAG" H 4050 2800 50  0000 C CNN
+F 2 "" H 4050 2650 50  0001 C CNN
+F 3 "" H 4050 2650 50  0001 C CNN
+	1    4050 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR05
+U 1 1 5A9AC111
+P 3450 2850
+F 0 "#PWR05" H 3450 2700 50  0001 C CNN
+F 1 "VCC" H 3450 3000 50  0000 C CNN
+F 2 "" H 3450 2850 50  0001 C CNN
+F 3 "" H 3450 2850 50  0001 C CNN
+	1    3450 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR06
+U 1 1 5A9AC21C
+P 4050 2850
+F 0 "#PWR06" H 4050 2600 50  0001 C CNN
+F 1 "GND" H 4050 2700 50  0000 C CNN
+F 2 "" H 4050 2850 50  0001 C CNN
+F 3 "" H 4050 2850 50  0001 C CNN
+	1    4050 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 5A9AC608
+P 5200 5100
+F 0 "#PWR07" H 5200 4850 50  0001 C CNN
+F 1 "GND" H 5200 4950 50  0000 C CNN
+F 2 "" H 5200 5100 50  0001 C CNN
+F 3 "" H 5200 5100 50  0001 C CNN
+	1    5200 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR08
+U 1 1 5A9AC7C6
+P 5200 4800
+F 0 "#PWR08" H 5200 4650 50  0001 C CNN
+F 1 "VCC" H 5200 4950 50  0000 C CNN
+F 2 "" H 5200 4800 50  0001 C CNN
+F 3 "" H 5200 4800 50  0001 C CNN
+	1    5200 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR09
+U 1 1 5A9AD2AF
+P 7800 2850
+F 0 "#PWR09" H 7800 2700 50  0001 C CNN
+F 1 "VCC" H 7800 3000 50  0000 C CNN
+F 2 "" H 7800 2850 50  0001 C CNN
+F 3 "" H 7800 2850 50  0001 C CNN
+	1    7800 2850
+	1    0    0    -1  
+$EndComp
+Text Label 6850 3400 0    60   ~ 0
+Input
+Text Label 6850 4950 0    60   ~ 0
+Input
+NoConn ~ 6450 3500
+NoConn ~ 6450 3600
+NoConn ~ 6450 3700
+NoConn ~ 6450 3800
+$Comp
+L Conn_01x11 J?
+U 1 1 5A9BF5B0
+P 9800 5550
+F 0 "J?" H 9800 6150 50  0000 C CNN
+F 1 "Conn_01x11" H 9800 4950 50  0000 C CNN
+F 2 "" H 9800 5550 50  0001 C CNN
+F 3 "" H 9800 5550 50  0001 C CNN
+	1    9800 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x11 J?
+U 1 1 5A9BF60F
+P 8250 5500
+F 0 "J?" H 8250 6100 50  0000 C CNN
+F 1 "Conn_01x11" H 8250 4900 50  0000 C CNN
+F 2 "" H 8250 5500 50  0001 C CNN
+F 3 "" H 8250 5500 50  0001 C CNN
+	1    8250 5500
+	-1   0    0    -1  
+$EndComp
+Text Label 8500 5000 0    60   ~ 0
+a1
+Text Label 8500 5100 0    60   ~ 0
+a2
+Text Label 8500 5200 0    60   ~ 0
+a3
+Text Label 8500 5300 0    60   ~ 0
+a4
+Text Label 8500 5400 0    60   ~ 0
+a5
+Text Label 8500 5500 0    60   ~ 0
+a6
+Text Label 8500 5600 0    60   ~ 0
+a7
+Text Label 8500 5700 0    60   ~ 0
+a8
+Text Label 8500 5800 0    60   ~ 0
+a9
+Text Label 8500 5900 0    60   ~ 0
+a10
+Text Label 8500 6000 0    60   ~ 0
+a11
+Text Label -176350 -925450 0    60   ~ 0
+a124
+Text Label -176350 -925350 0    60   ~ 0
+a125
+Text Label -176350 -925250 0    60   ~ 0
+a126
+Text Label -176350 -925150 0    60   ~ 0
+a127
+Text Label -176350 -925050 0    60   ~ 0
+a128
+Text Label -176350 -924950 0    60   ~ 0
+a129
+Text Label -176350 -924850 0    60   ~ 0
+a130
+Text Label -176350 -924750 0    60   ~ 0
+a131
+Text Label -176350 -924650 0    60   ~ 0
+a132
+Text Label -176350 -924550 0    60   ~ 0
+a133
+Text Label -176350 -924450 0    60   ~ 0
+a134
+Text Label -176350 -924350 0    60   ~ 0
+a135
+Text Label -176350 -924250 0    60   ~ 0
+a136
+Text Label -176350 -924150 0    60   ~ 0
+a137
+Text Label -176350 -924050 0    60   ~ 0
+a138
+Text Label -176350 -923950 0    60   ~ 0
+a139
+Text Label -176350 -923850 0    60   ~ 0
+a140
+Text Label -176350 -923750 0    60   ~ 0
+a141
+Text Label -176350 -923650 0    60   ~ 0
+a142
+Text Label -176350 -923550 0    60   ~ 0
+a143
+Text Label -176350 -923450 0    60   ~ 0
+a144
+Text Label -176350 -923350 0    60   ~ 0
+a145
+Text Label -176350 -923250 0    60   ~ 0
+a146
+Text Label -176350 -923150 0    60   ~ 0
+a147
+Text Label -176350 -923050 0    60   ~ 0
+a148
+Text Label -176350 -922950 0    60   ~ 0
+a149
+Text Label -176350 -922850 0    60   ~ 0
+a150
+Text Label -176350 -922750 0    60   ~ 0
+a151
+Text Label -176350 -922650 0    60   ~ 0
+a152
+Text Label -176350 -922550 0    60   ~ 0
+a153
+Text Label -176350 -922450 0    60   ~ 0
+a154
+Text Label -176350 -922350 0    60   ~ 0
+a155
+Text Label -176350 -922250 0    60   ~ 0
+a156
+Text Label -176350 -922150 0    60   ~ 0
+a157
+Text Label -176350 -922050 0    60   ~ 0
+a158
+Text Label -176350 -921950 0    60   ~ 0
+a159
+Text Label -176350 -921850 0    60   ~ 0
+a160
+Text Label -176350 -921750 0    60   ~ 0
+a161
+Text Label -176350 -921650 0    60   ~ 0
+a162
+Text Label -176350 -921550 0    60   ~ 0
+a163
+Text Label -176350 -921450 0    60   ~ 0
+a164
+Text Label -176350 -921350 0    60   ~ 0
+a165
+Text Label -176350 -921250 0    60   ~ 0
+a166
+Text Label -176350 -921150 0    60   ~ 0
+a167
+Text Label -176350 -921050 0    60   ~ 0
+a168
+Text Label -176350 -920950 0    60   ~ 0
+a169
+Text Label -176350 -920850 0    60   ~ 0
+a170
+Text Label -176350 -920750 0    60   ~ 0
+a171
+Text Label -176350 -920650 0    60   ~ 0
+a172
+Text Label -176350 -920550 0    60   ~ 0
+a173
+Text Label -176350 -920450 0    60   ~ 0
+a174
+Text Label -176350 -920350 0    60   ~ 0
+a175
+Text Label -176350 -920250 0    60   ~ 0
+a176
+Text Label -176350 -920150 0    60   ~ 0
+a177
+Text Label -176350 -920050 0    60   ~ 0
+a178
+Text Label -176350 -919950 0    60   ~ 0
+a179
+Text Label -176350 -919850 0    60   ~ 0
+a180
+Text Label -176350 -919750 0    60   ~ 0
+a181
+Text Label -176350 -919650 0    60   ~ 0
+a182
+Text Label -176350 -919550 0    60   ~ 0
+a183
+Text Label -176350 -919450 0    60   ~ 0
+a184
+Text Label -176350 -919350 0    60   ~ 0
+a185
+Text Label -176350 -919250 0    60   ~ 0
+a186
+Text Label -176350 -919150 0    60   ~ 0
+a187
+Text Label -176350 -919050 0    60   ~ 0
+a188
+Text Label -176350 -918950 0    60   ~ 0
+a189
+Text Label -176350 -918850 0    60   ~ 0
+a190
+Text Label -176350 -918750 0    60   ~ 0
+a191
+Text Label -176350 -918650 0    60   ~ 0
+a192
+Text Label -176350 -918550 0    60   ~ 0
+a193
+Text Label -176350 -918450 0    60   ~ 0
+a194
+Text Label -176350 -918350 0    60   ~ 0
+a195
+Text Label -176350 -918250 0    60   ~ 0
+a196
+Text Label -176350 -918150 0    60   ~ 0
+a197
+Text Label -176350 -918050 0    60   ~ 0
+a198
+Text Label -176350 -917950 0    60   ~ 0
+a199
+Text Label -176350 -917850 0    60   ~ 0
+a200
+Text Label -176350 -917750 0    60   ~ 0
+a201
+Text Label -176350 -917650 0    60   ~ 0
+a202
+Text Label -176350 -917550 0    60   ~ 0
+a203
+Text Label -176350 -917450 0    60   ~ 0
+a204
+Text Label -176350 -917350 0    60   ~ 0
+a205
+Text Label -176350 -917250 0    60   ~ 0
+a206
+Text Label -176350 -917150 0    60   ~ 0
+a207
+Text Label -176350 -917050 0    60   ~ 0
+a208
+Text Label -176350 -916950 0    60   ~ 0
+a209
+Text Label -176350 -916850 0    60   ~ 0
+a210
+Text Label -176350 -916750 0    60   ~ 0
+a211
+Text Label -176350 -916650 0    60   ~ 0
+a212
+Text Label -176350 -916550 0    60   ~ 0
+a213
+Text Label -176350 -916450 0    60   ~ 0
+a214
+Text Label -176350 -916350 0    60   ~ 0
+a215
+Text Label -176350 -916250 0    60   ~ 0
+a216
+Text Label -176350 -916150 0    60   ~ 0
+a217
+Text Label -176350 -916050 0    60   ~ 0
+a218
+Text Label -176350 -915950 0    60   ~ 0
+a219
+Text Label -176350 -915850 0    60   ~ 0
+a220
+Text Label -176350 -915750 0    60   ~ 0
+a221
+Text Label -176350 -915650 0    60   ~ 0
+a222
+Text Label -176350 -915550 0    60   ~ 0
+a223
+Text Label -176350 -915450 0    60   ~ 0
+a224
+Text Label -176350 -915350 0    60   ~ 0
+a225
+Text Label -176350 -915250 0    60   ~ 0
+a226
+Text Label -176350 -915150 0    60   ~ 0
+a227
+Text Label -176350 -915050 0    60   ~ 0
+a228
+Text Label -176350 -914950 0    60   ~ 0
+a229
+Text Label -176350 -914850 0    60   ~ 0
+a230
+Text Label -176350 -914750 0    60   ~ 0
+a231
+Text Label -176350 -914650 0    60   ~ 0
+a232
+Text Label -176350 -914550 0    60   ~ 0
+a233
+Text Label -176350 -914450 0    60   ~ 0
+a234
+Text Label -176350 -914350 0    60   ~ 0
+a235
+Text Label -176350 -914250 0    60   ~ 0
+a236
+Text Label -176350 -914150 0    60   ~ 0
+a237
+Text Label -176350 -914050 0    60   ~ 0
+a238
+Text Label -176350 -913950 0    60   ~ 0
+a239
+Text Label -176350 -913850 0    60   ~ 0
+a240
+Text Label -176350 -913750 0    60   ~ 0
+a241
+Text Label -176350 -913650 0    60   ~ 0
+a242
+Text Label -176350 -913550 0    60   ~ 0
+a243
+Text Label -176350 -913450 0    60   ~ 0
+a244
+Text Label -176350 -913350 0    60   ~ 0
+a245
+Text Label -176350 -913250 0    60   ~ 0
+a246
+Text Label -176350 -913150 0    60   ~ 0
+a247
+Text Label -176350 -913050 0    60   ~ 0
+a248
+Text Label -176350 -912950 0    60   ~ 0
+a249
+Text Label -176350 -912850 0    60   ~ 0
+a250
+Text Label -176350 -912750 0    60   ~ 0
+a251
+Text Label -176350 -912650 0    60   ~ 0
+a252
+Text Label -176350 -912550 0    60   ~ 0
+a253
+Text Label -176350 -912450 0    60   ~ 0
+a254
+Text Label -176350 -912350 0    60   ~ 0
+a255
+Text Label -176350 -912250 0    60   ~ 0
+a256
+Text Label -176350 -912150 0    60   ~ 0
+a257
+Text Label -176350 -912050 0    60   ~ 0
+a258
+Text Label -176350 -911950 0    60   ~ 0
+a259
+Text Label -176350 -911850 0    60   ~ 0
+a260
+Text Label -176350 -911750 0    60   ~ 0
+a261
+Text Label -176350 -911650 0    60   ~ 0
+a262
+Text Label -176350 -911550 0    60   ~ 0
+a263
+Text Label -176350 -911450 0    60   ~ 0
+a264
+Text Label -176350 -911350 0    60   ~ 0
+a265
+Text Label -176350 -911250 0    60   ~ 0
+a266
+Text Label -176350 -911150 0    60   ~ 0
+a267
+Text Label -176350 -911050 0    60   ~ 0
+a268
+Text Label -176350 -910950 0    60   ~ 0
+a269
+Text Label -176350 -910850 0    60   ~ 0
+a270
+Text Label -176350 -910750 0    60   ~ 0
+a271
+Text Label -176350 -910650 0    60   ~ 0
+a272
+Text Label -176350 -910550 0    60   ~ 0
+a273
+Text Label -176350 -910450 0    60   ~ 0
+a274
+Text Label -176350 -910350 0    60   ~ 0
+a275
+Text Label -176350 -910250 0    60   ~ 0
+a276
+Text Label -176350 -910150 0    60   ~ 0
+a277
+Text Label -176350 -910050 0    60   ~ 0
+a278
+Text Label -176350 -909950 0    60   ~ 0
+a279
+Text Label -176350 -909850 0    60   ~ 0
+a280
+Text Label -176350 -909750 0    60   ~ 0
+a281
+Text Label -176350 -909650 0    60   ~ 0
+a282
+Text Label -176350 -909550 0    60   ~ 0
+a283
+Text Label -176350 -909450 0    60   ~ 0
+a284
+Text Label -176350 -909350 0    60   ~ 0
+a285
+Text Label -176350 -909250 0    60   ~ 0
+a286
+Text Label -176350 -909150 0    60   ~ 0
+a287
+Text Label -176350 -909050 0    60   ~ 0
+a288
+Text Label -176350 -908950 0    60   ~ 0
+a289
+Text Label -176350 -908850 0    60   ~ 0
+a290
+Text Label -176350 -908750 0    60   ~ 0
+a291
+Text Label -176350 -908650 0    60   ~ 0
+a292
+Text Label -176350 -908550 0    60   ~ 0
+a293
+Text Label -176350 -908450 0    60   ~ 0
+a294
+Text Label -176350 -908350 0    60   ~ 0
+a295
+Text Label -176350 -908250 0    60   ~ 0
+a296
+Text Label -176350 -908150 0    60   ~ 0
+a297
+Text Label -176350 -908050 0    60   ~ 0
+a298
+Text Label -176350 -907950 0    60   ~ 0
+a299
+Text Label -176350 -907850 0    60   ~ 0
+a300
+Text Label -176350 -907750 0    60   ~ 0
+a301
+Text Label -176350 -907650 0    60   ~ 0
+a302
+Text Label -176350 -907550 0    60   ~ 0
+a303
+Text Label -176350 -907450 0    60   ~ 0
+a304
+Text Label -176350 -907350 0    60   ~ 0
+a305
+Text Label -176350 -907250 0    60   ~ 0
+a306
+Text Label -176350 -907150 0    60   ~ 0
+a307
+Text Label -176350 -907050 0    60   ~ 0
+a308
+Text Label -176350 -906950 0    60   ~ 0
+a309
+Text Label -176350 -906850 0    60   ~ 0
+a310
+Text Label -176350 -906750 0    60   ~ 0
+a311
+Text Label -176350 -906650 0    60   ~ 0
+a312
+Text Label -176350 -906550 0    60   ~ 0
+a313
+Text Label -176350 -906450 0    60   ~ 0
+a314
+Text Label -176350 -906350 0    60   ~ 0
+a315
+Text Label -176350 -906250 0    60   ~ 0
+a316
+Text Label -176350 -906150 0    60   ~ 0
+a317
+Text Label -176350 -906050 0    60   ~ 0
+a318
+Text Label -176350 -905950 0    60   ~ 0
+a319
+Text Label -176350 -905850 0    60   ~ 0
+a320
+Text Label -176350 -905750 0    60   ~ 0
+a321
+Text Label -176350 -905650 0    60   ~ 0
+a322
+Text Label -176350 -905550 0    60   ~ 0
+a323
+Text Label -176350 -905450 0    60   ~ 0
+a324
+Text Label -176350 -905350 0    60   ~ 0
+a325
+Text Label -176350 -905250 0    60   ~ 0
+a326
+Text Label -176350 -905150 0    60   ~ 0
+a327
+Text Label -176350 -905050 0    60   ~ 0
+a328
+Text Label -176350 -904950 0    60   ~ 0
+a329
+Text Label -176350 -904850 0    60   ~ 0
+a330
+Text Label -176350 -904750 0    60   ~ 0
+a331
+Text Label -176350 -904650 0    60   ~ 0
+a332
+Text Label -176350 -904550 0    60   ~ 0
+a333
+Text Label -176350 -904450 0    60   ~ 0
+a334
+Text Label -176350 -904350 0    60   ~ 0
+a335
+Text Label -176350 -904250 0    60   ~ 0
+a336
+Text Label -176350 -904150 0    60   ~ 0
+a337
+Text Label -176350 -904050 0    60   ~ 0
+a338
+Text Label -176350 -903950 0    60   ~ 0
+a339
+Text Label -176350 -903850 0    60   ~ 0
+a340
+Text Label -176350 -903750 0    60   ~ 0
+a341
+Text Label -176350 -903650 0    60   ~ 0
+a342
+Text Label -176350 -903550 0    60   ~ 0
+a343
+Text Label -176350 -903450 0    60   ~ 0
+a344
+Text Label -176350 -903350 0    60   ~ 0
+a345
+Text Label -176350 -903250 0    60   ~ 0
+a346
+Text Label -176350 -903150 0    60   ~ 0
+a347
+Text Label -176350 -903050 0    60   ~ 0
+a348
+Text Label -176350 -902950 0    60   ~ 0
+a349
+Text Label -176350 -902850 0    60   ~ 0
+a350
+Text Label -176350 -902750 0    60   ~ 0
+a351
+Text Label -176350 -902650 0    60   ~ 0
+a352
+Text Label -176350 -902550 0    60   ~ 0
+a353
+Text Label -176350 -902450 0    60   ~ 0
+a354
+Text Label -176350 -902350 0    60   ~ 0
+a355
+Text Label -176350 -902250 0    60   ~ 0
+a356
+Text Label -176350 -902150 0    60   ~ 0
+a357
+Text Label -176350 -902050 0    60   ~ 0
+a358
+Text Label -176350 -901950 0    60   ~ 0
+a359
+Text Label -176350 -901850 0    60   ~ 0
+a360
+Text Label -176350 -901750 0    60   ~ 0
+a361
+Text Label -176350 -901650 0    60   ~ 0
+a362
+Text Label -176350 -901550 0    60   ~ 0
+a363
+Text Label -176350 -901450 0    60   ~ 0
+a364
+Text Label -176350 -901350 0    60   ~ 0
+a365
+Text Label -176350 -901250 0    60   ~ 0
+a366
+Text Label -176350 -901150 0    60   ~ 0
+a367
+Text Label -176350 -901050 0    60   ~ 0
+a368
+Text Label -176350 -900950 0    60   ~ 0
+a369
+Text Label -176350 -900850 0    60   ~ 0
+a370
+Text Label -176350 -900750 0    60   ~ 0
+a371
+Text Label -176350 -900650 0    60   ~ 0
+a372
+Text Label -176350 -900550 0    60   ~ 0
+a373
+Text Label -176350 -900450 0    60   ~ 0
+a374
+Text Label -176350 -900350 0    60   ~ 0
+a375
+Text Label -176350 -900250 0    60   ~ 0
+a376
+Text Label -176350 -900150 0    60   ~ 0
+a377
+Text Label -176350 -900050 0    60   ~ 0
+a378
+Text Label -176350 -899950 0    60   ~ 0
+a379
+Text Label -176350 -899850 0    60   ~ 0
+a380
+Text Label -176350 -899750 0    60   ~ 0
+a381
+Text Label -176350 -899650 0    60   ~ 0
+a382
+Text Label -176350 -899550 0    60   ~ 0
+a383
+Text Label -176350 -899450 0    60   ~ 0
+a384
+Text Label -176350 -899350 0    60   ~ 0
+a385
+Text Label -176350 -899250 0    60   ~ 0
+a386
+Text Label -176350 -899150 0    60   ~ 0
+a387
+Text Label -176350 -899050 0    60   ~ 0
+a388
+Text Label -176350 -898950 0    60   ~ 0
+a389
+Text Label -176350 -898850 0    60   ~ 0
+a390
+Text Label -176350 -898750 0    60   ~ 0
+a391
+Text Label -176350 -898650 0    60   ~ 0
+a392
+Text Label -176350 -898550 0    60   ~ 0
+a393
+Text Label -176350 -898450 0    60   ~ 0
+a394
+Text Label -176350 -898350 0    60   ~ 0
+a395
+Text Label -176350 -898250 0    60   ~ 0
+a396
+Text Label -176350 -898150 0    60   ~ 0
+a397
+Text Label -176350 -898050 0    60   ~ 0
+a398
+Text Label -176350 -897950 0    60   ~ 0
+a399
+Text Label -176350 -897850 0    60   ~ 0
+a400
+Text Label -176350 -897750 0    60   ~ 0
+a401
+Text Label -176350 -897650 0    60   ~ 0
+a402
+Text Label -176350 -897550 0    60   ~ 0
+a403
+Text Label -176350 -897450 0    60   ~ 0
+a404
+Text Label -176350 -897350 0    60   ~ 0
+a405
+Text Label -176350 -897250 0    60   ~ 0
+a406
+Text Label -176350 -897150 0    60   ~ 0
+a407
+Text Label -176350 -897050 0    60   ~ 0
+a408
+Text Label -176350 -896950 0    60   ~ 0
+a409
+Text Label -176350 -896850 0    60   ~ 0
+a410
+Text Label -176350 -896750 0    60   ~ 0
+a411
+Text Label -176350 -896650 0    60   ~ 0
+a412
+Text Label -176350 -896550 0    60   ~ 0
+a413
+Text Label -176350 -896450 0    60   ~ 0
+a414
+Text Label -176350 -896350 0    60   ~ 0
+a415
+Text Label -176350 -896250 0    60   ~ 0
+a416
+Text Label -176350 -896150 0    60   ~ 0
+a417
+Text Label -176350 -896050 0    60   ~ 0
+a418
+Text Label -176350 -895950 0    60   ~ 0
+a419
+Text Label -176350 -895850 0    60   ~ 0
+a420
+Text Label -176350 -895750 0    60   ~ 0
+a421
+Text Label -176350 -895650 0    60   ~ 0
+a422
+Text Label -176350 -895550 0    60   ~ 0
+a423
+Text Label -176350 -895450 0    60   ~ 0
+a424
+Text Label -176350 -895350 0    60   ~ 0
+a425
+Text Label -176350 -895250 0    60   ~ 0
+a426
+Text Label -176350 -895150 0    60   ~ 0
+a427
+Text Label -176350 -895050 0    60   ~ 0
+a428
+Text Label -176350 -894950 0    60   ~ 0
+a429
+Text Label -176350 -894850 0    60   ~ 0
+a430
+Text Label -176350 -894750 0    60   ~ 0
+a431
+Text Label -176350 -894650 0    60   ~ 0
+a432
+Text Label -176350 -894550 0    60   ~ 0
+a433
+Text Label -176350 -894450 0    60   ~ 0
+a434
+Text Label -176350 -894350 0    60   ~ 0
+a435
+Text Label -176350 -894250 0    60   ~ 0
+a436
+Text Label -176350 -894150 0    60   ~ 0
+a437
+Text Label -176350 -894050 0    60   ~ 0
+a438
+Text Label -176350 -893950 0    60   ~ 0
+a439
+Text Label -176350 -893850 0    60   ~ 0
+a440
+Text Label -176350 -893750 0    60   ~ 0
+a441
+Text Label -176350 -893650 0    60   ~ 0
+a442
+Text Label -176350 -893550 0    60   ~ 0
+a443
+Text Label -176350 -893450 0    60   ~ 0
+a444
+Text Label -176350 -893350 0    60   ~ 0
+a445
+Text Label -176350 -893250 0    60   ~ 0
+a446
+Text Label -176350 -893150 0    60   ~ 0
+a447
+Text Label -176350 -893050 0    60   ~ 0
+a448
+Text Label -176350 -892950 0    60   ~ 0
+a449
+Text Label -176350 -892850 0    60   ~ 0
+a450
+Text Label -176350 -892750 0    60   ~ 0
+a451
+Text Label -176350 -892650 0    60   ~ 0
+a452
+Text Label -176350 -892550 0    60   ~ 0
+a453
+Text Label -176350 -892450 0    60   ~ 0
+a454
+Text Label -176350 -892350 0    60   ~ 0
+a455
+Text Label -176350 -892250 0    60   ~ 0
+a456
+Text Label -176350 -892150 0    60   ~ 0
+a457
+Text Label -176350 -892050 0    60   ~ 0
+a458
+Text Label -176350 -891950 0    60   ~ 0
+a459
+Text Label -176350 -891850 0    60   ~ 0
+a460
+Text Label -176350 -891750 0    60   ~ 0
+a461
+Text Label -176350 -891650 0    60   ~ 0
+a462
+Text Label -176350 -891550 0    60   ~ 0
+a463
+Text Label -176350 -891450 0    60   ~ 0
+a464
+Text Label -176350 -891350 0    60   ~ 0
+a465
+Text Label -176350 -891250 0    60   ~ 0
+a466
+Text Label -176350 -891150 0    60   ~ 0
+a467
+Text Label -176350 -891050 0    60   ~ 0
+a468
+Text Label -176350 -890950 0    60   ~ 0
+a469
+Text Label -176350 -890850 0    60   ~ 0
+a470
+Text Label -176350 -890750 0    60   ~ 0
+a471
+Text Label -176350 -890650 0    60   ~ 0
+a472
+Text Label -176350 -890550 0    60   ~ 0
+a473
+Text Label -176350 -890450 0    60   ~ 0
+a474
+Text Label -176350 -890350 0    60   ~ 0
+a475
+Text Label -176350 -890250 0    60   ~ 0
+a476
+Text Label -176350 -890150 0    60   ~ 0
+a477
+Text Label -176350 -890050 0    60   ~ 0
+a478
+Text Label -176350 -889950 0    60   ~ 0
+a479
+Text Label -176350 -889850 0    60   ~ 0
+a480
+Text Label -176350 -889750 0    60   ~ 0
+a481
+Text Label -176350 -889650 0    60   ~ 0
+a482
+Text Label -176350 -889550 0    60   ~ 0
+a483
+Text Label -176350 -889450 0    60   ~ 0
+a484
+Text Label -176350 -889350 0    60   ~ 0
+a485
+Text Label -176350 -889250 0    60   ~ 0
+a486
+Text Label -176350 -889150 0    60   ~ 0
+a487
+Text Label -176350 -889050 0    60   ~ 0
+a488
+Text Label -176350 -888950 0    60   ~ 0
+a489
+Text Label -176350 -888850 0    60   ~ 0
+a490
+Text Label -176350 -888750 0    60   ~ 0
+a491
+Text Label -176350 -888650 0    60   ~ 0
+a492
+Text Label -176350 -888550 0    60   ~ 0
+a493
+Text Label -176350 -888450 0    60   ~ 0
+a494
+Text Label -176350 -888350 0    60   ~ 0
+a495
+Text Label -176350 -888250 0    60   ~ 0
+a496
+Text Label -176350 -888150 0    60   ~ 0
+a497
+Text Label -176350 -888050 0    60   ~ 0
+a498
+Text Label -176350 -887950 0    60   ~ 0
+a499
+Text Label -176350 -887850 0    60   ~ 0
+a500
+Text Label -176350 -887750 0    60   ~ 0
+a501
+Text Label -176350 -887650 0    60   ~ 0
+a502
+Text Label -176350 -887550 0    60   ~ 0
+a503
+Text Label -176350 -887450 0    60   ~ 0
+a504
+Text Label -176350 -887350 0    60   ~ 0
+a505
+Text Label -176350 -887250 0    60   ~ 0
+a506
+Text Label -176350 -887150 0    60   ~ 0
+a507
+Text Label -176350 -887050 0    60   ~ 0
+a508
+Text Label -176350 -886950 0    60   ~ 0
+a509
+Text Label -176350 -886850 0    60   ~ 0
+a510
+Text Label -176350 -886750 0    60   ~ 0
+a511
+Text Label -176350 -886650 0    60   ~ 0
+a512
+Text Label -176350 -886550 0    60   ~ 0
+a513
+Text Label -176350 -886450 0    60   ~ 0
+a514
+Text Label -176350 -886350 0    60   ~ 0
+a515
+Text Label -176350 -886250 0    60   ~ 0
+a516
+Text Label -176350 -886150 0    60   ~ 0
+a517
+Text Label -176350 -886050 0    60   ~ 0
+a518
+Text Label -176350 -885950 0    60   ~ 0
+a519
+Text Label -176350 -885850 0    60   ~ 0
+a520
+Text Label -176350 -885750 0    60   ~ 0
+a521
+Text Label -176350 -885650 0    60   ~ 0
+a522
+Text Label -176350 -885550 0    60   ~ 0
+a523
+Text Label -176350 -885450 0    60   ~ 0
+a524
+Text Label -176350 -885350 0    60   ~ 0
+a525
+Text Label -176350 -885250 0    60   ~ 0
+a526
+Text Label -176350 -885150 0    60   ~ 0
+a527
+Text Label -176350 -885050 0    60   ~ 0
+a528
+Text Label -176350 -884950 0    60   ~ 0
+a529
+Text Label -176350 -884850 0    60   ~ 0
+a530
+Text Label -176350 -884750 0    60   ~ 0
+a531
+Text Label -176350 -884650 0    60   ~ 0
+a532
+Text Label -176350 -884550 0    60   ~ 0
+a533
+Text Label -176350 -884450 0    60   ~ 0
+a534
+Text Label -176350 -884350 0    60   ~ 0
+a535
+Text Label -176350 -884250 0    60   ~ 0
+a536
+Text Label -176350 -884150 0    60   ~ 0
+a537
+Text Label -176350 -884050 0    60   ~ 0
+a538
+Text Label -176350 -883950 0    60   ~ 0
+a539
+Text Label -176350 -883850 0    60   ~ 0
+a540
+Text Label -176350 -883750 0    60   ~ 0
+a541
+Text Label -176350 -883650 0    60   ~ 0
+a542
+Text Label -176350 -883550 0    60   ~ 0
+a543
+Text Label -176350 -883450 0    60   ~ 0
+a544
+Text Label -176350 -883350 0    60   ~ 0
+a545
+Text Label -176350 -883250 0    60   ~ 0
+a546
+Text Label -176350 -883150 0    60   ~ 0
+a547
+Text Label -176350 -883050 0    60   ~ 0
+a548
+Text Label -176350 -882950 0    60   ~ 0
+a549
+Text Label -176350 -882850 0    60   ~ 0
+a550
+Text Label -176350 -882750 0    60   ~ 0
+a551
+Text Label -176350 -882650 0    60   ~ 0
+a552
+Text Label -176350 -882550 0    60   ~ 0
+a553
+Text Label -176350 -882450 0    60   ~ 0
+a554
+Text Label -176350 -882350 0    60   ~ 0
+a555
+Text Label -176350 -882250 0    60   ~ 0
+a556
+Text Label -176350 -882150 0    60   ~ 0
+a557
+Text Label -176350 -882050 0    60   ~ 0
+a558
+Text Label -176350 -881950 0    60   ~ 0
+a559
+Text Label -176350 -881850 0    60   ~ 0
+a560
+Text Label -176350 -881750 0    60   ~ 0
+a561
+Text Label -176350 -881650 0    60   ~ 0
+a562
+Text Label -176350 -881550 0    60   ~ 0
+a563
+Text Label -176350 -881450 0    60   ~ 0
+a564
+Text Label -176350 -881350 0    60   ~ 0
+a565
+Text Label -176350 -881250 0    60   ~ 0
+a566
+Text Label -176350 -881150 0    60   ~ 0
+a567
+Text Label -176350 -881050 0    60   ~ 0
+a568
+Text Label -176350 -880950 0    60   ~ 0
+a569
+Text Label -176350 -880850 0    60   ~ 0
+a570
+Text Label -176350 -880750 0    60   ~ 0
+a571
+Text Label -176350 -880650 0    60   ~ 0
+a572
+Text Label -176350 -880550 0    60   ~ 0
+a573
+Text Label -176350 -880450 0    60   ~ 0
+a574
+Text Label -176350 -880350 0    60   ~ 0
+a575
+Text Label -176350 -880250 0    60   ~ 0
+a576
+Text Label -176350 -880150 0    60   ~ 0
+a577
+Text Label -176350 -880050 0    60   ~ 0
+a578
+Text Label -176350 -879950 0    60   ~ 0
+a579
+Text Label -176350 -879850 0    60   ~ 0
+a580
+Text Label -176350 -879750 0    60   ~ 0
+a581
+Text Label -176350 -879650 0    60   ~ 0
+a582
+Text Label -176350 -879550 0    60   ~ 0
+a583
+Text Label -176350 -879450 0    60   ~ 0
+a584
+Text Label -176350 -879350 0    60   ~ 0
+a585
+Text Label -176350 -879250 0    60   ~ 0
+a586
+Text Label -176350 -879150 0    60   ~ 0
+a587
+Text Label -176350 -879050 0    60   ~ 0
+a588
+Text Label -176350 -878950 0    60   ~ 0
+a589
+Text Label -176350 -878850 0    60   ~ 0
+a590
+Text Label -176350 -878750 0    60   ~ 0
+a591
+Text Label -176350 -878650 0    60   ~ 0
+a592
+Text Label -176350 -878550 0    60   ~ 0
+a593
+Text Label -176350 -878450 0    60   ~ 0
+a594
+Text Label -176350 -878350 0    60   ~ 0
+a595
+Text Label -176350 -878250 0    60   ~ 0
+a596
+Text Label -176350 -878150 0    60   ~ 0
+a597
+Text Label -176350 -878050 0    60   ~ 0
+a598
+Text Label -176350 -877950 0    60   ~ 0
+a599
+Text Label -176350 -877850 0    60   ~ 0
+a600
+Text Label -176350 -877750 0    60   ~ 0
+a601
+Text Label -176350 -877650 0    60   ~ 0
+a602
+Text Label -176350 -877550 0    60   ~ 0
+a603
+Text Label -176350 -877450 0    60   ~ 0
+a604
+Text Label -176350 -877350 0    60   ~ 0
+a605
+Text Label -176350 -877250 0    60   ~ 0
+a606
+Text Label -176350 -877150 0    60   ~ 0
+a607
+Text Label -176350 -877050 0    60   ~ 0
+a608
+Text Label -176350 -876950 0    60   ~ 0
+a609
+Text Label -176350 -876850 0    60   ~ 0
+a610
+Text Label -176350 -876750 0    60   ~ 0
+a611
+Text Label -176350 -876650 0    60   ~ 0
+a612
+Text Label -176350 -876550 0    60   ~ 0
+a613
+Text Label -176350 -876450 0    60   ~ 0
+a614
+Text Label -176350 -876350 0    60   ~ 0
+a615
+Text Label -176350 -876250 0    60   ~ 0
+a616
+Text Label -176350 -876150 0    60   ~ 0
+a617
+Text Label -176350 -876050 0    60   ~ 0
+a618
+Text Label -176350 -875950 0    60   ~ 0
+a619
+Text Label -176350 -875850 0    60   ~ 0
+a620
+Text Label -176350 -875750 0    60   ~ 0
+a621
+Text Label -176350 -875650 0    60   ~ 0
+a622
+Text Label -176350 -875550 0    60   ~ 0
+a623
+Text Label -176350 -875450 0    60   ~ 0
+a624
+Text Label -176350 -875350 0    60   ~ 0
+a625
+Text Label -176350 -875250 0    60   ~ 0
+a626
+Text Label -176350 -875150 0    60   ~ 0
+a627
+Text Label -176350 -875050 0    60   ~ 0
+a628
+Text Label -176350 -874950 0    60   ~ 0
+a629
+Text Label -176350 -874850 0    60   ~ 0
+a630
+Text Label -176350 -874750 0    60   ~ 0
+a631
+Text Label -176350 -874650 0    60   ~ 0
+a632
+Text Label -176350 -874550 0    60   ~ 0
+a633
+Text Label -176350 -874450 0    60   ~ 0
+a634
+Text Label -176350 -874350 0    60   ~ 0
+a635
+Text Label -176350 -874250 0    60   ~ 0
+a636
+Text Label -176350 -874150 0    60   ~ 0
+a637
+Text Label -176350 -874050 0    60   ~ 0
+a638
+Text Label -176350 -873950 0    60   ~ 0
+a639
+Text Label -176350 -873850 0    60   ~ 0
+a640
+Text Label -176350 -873750 0    60   ~ 0
+a641
+Text Label -176350 -873650 0    60   ~ 0
+a642
+Text Label -176350 -873550 0    60   ~ 0
+a643
+Text Label -176350 -873450 0    60   ~ 0
+a644
+Text Label -176350 -873350 0    60   ~ 0
+a645
+Text Label -176350 -873250 0    60   ~ 0
+a646
+Text Label -176350 -873150 0    60   ~ 0
+a647
+Text Label -176350 -873050 0    60   ~ 0
+a648
+Text Label -176350 -872950 0    60   ~ 0
+a649
+Text Label -176350 -872850 0    60   ~ 0
+a650
+Text Label -176350 -872750 0    60   ~ 0
+a651
+Text Label -176350 -872650 0    60   ~ 0
+a652
+Text Label -176350 -872550 0    60   ~ 0
+a653
+Text Label -176350 -872450 0    60   ~ 0
+a654
+Text Label -176350 -872350 0    60   ~ 0
+a655
+Text Label -176350 -872250 0    60   ~ 0
+a656
+Text Label -176350 -872150 0    60   ~ 0
+a657
+Text Label -176350 -872050 0    60   ~ 0
+a658
+Text Label -176350 -871950 0    60   ~ 0
+a659
+Text Label -176350 -871850 0    60   ~ 0
+a660
+Text Label -176350 -871750 0    60   ~ 0
+a661
+Text Label -176350 -871650 0    60   ~ 0
+a662
+Text Label -176350 -871550 0    60   ~ 0
+a663
+Text Label -176350 -871450 0    60   ~ 0
+a664
+Text Label -176350 -871350 0    60   ~ 0
+a665
+Text Label -176350 -871250 0    60   ~ 0
+a666
+Text Label -176350 -871150 0    60   ~ 0
+a667
+Text Label -176350 -871050 0    60   ~ 0
+a668
+Text Label -176350 -870950 0    60   ~ 0
+a669
+Text Label -176350 -870850 0    60   ~ 0
+a670
+Text Label -176350 -870750 0    60   ~ 0
+a671
+Text Label -176350 -870650 0    60   ~ 0
+a672
+Text Label -176350 -870550 0    60   ~ 0
+a673
+Text Label -176350 -870450 0    60   ~ 0
+a674
+Text Label -176350 -870350 0    60   ~ 0
+a675
+Text Label -176350 -870250 0    60   ~ 0
+a676
+Text Label -176350 -870150 0    60   ~ 0
+a677
+Text Label -176350 -870050 0    60   ~ 0
+a678
+Text Label -176350 -869950 0    60   ~ 0
+a679
+Text Label -176350 -869850 0    60   ~ 0
+a680
+Text Label -176350 -869750 0    60   ~ 0
+a681
+Text Label -176350 -869650 0    60   ~ 0
+a682
+Text Label -176350 -869550 0    60   ~ 0
+a683
+Text Label -176350 -869450 0    60   ~ 0
+a684
+Text Label -176350 -869350 0    60   ~ 0
+a685
+Text Label -176350 -869250 0    60   ~ 0
+a686
+Text Label -176350 -869150 0    60   ~ 0
+a687
+Text Label -176350 -869050 0    60   ~ 0
+a688
+Text Label -176350 -868950 0    60   ~ 0
+a689
+Text Label -176350 -868850 0    60   ~ 0
+a690
+Text Label -176350 -868750 0    60   ~ 0
+a691
+Text Label -176350 -868650 0    60   ~ 0
+a692
+Text Label -176350 -868550 0    60   ~ 0
+a693
+Text Label -176350 -868450 0    60   ~ 0
+a694
+Text Label -176350 -868350 0    60   ~ 0
+a695
+Text Label -176350 -868250 0    60   ~ 0
+a696
+Text Label -176350 -868150 0    60   ~ 0
+a697
+Text Label -176350 -868050 0    60   ~ 0
+a698
+Text Label -176350 -867950 0    60   ~ 0
+a699
+Text Label -176350 -867850 0    60   ~ 0
+a700
+Text Label -176350 -867750 0    60   ~ 0
+a701
+Text Label -176350 -867650 0    60   ~ 0
+a702
+Text Label -176350 -867550 0    60   ~ 0
+a703
+Text Label -176350 -867450 0    60   ~ 0
+a704
+Text Label -176350 -867350 0    60   ~ 0
+a705
+Text Label -176350 -867250 0    60   ~ 0
+a706
+Text Label -176350 -867150 0    60   ~ 0
+a707
+Text Label -176350 -867050 0    60   ~ 0
+a708
+Text Label -176350 -866950 0    60   ~ 0
+a709
+Text Label -176350 -866850 0    60   ~ 0
+a710
+Text Label -176350 -866750 0    60   ~ 0
+a711
+Text Label -176350 -866650 0    60   ~ 0
+a712
+Text Label -176350 -866550 0    60   ~ 0
+a713
+Text Label -176350 -866450 0    60   ~ 0
+a714
+Text Label -176350 -866350 0    60   ~ 0
+a715
+Text Label -176350 -866250 0    60   ~ 0
+a716
+Text Label -176350 -866150 0    60   ~ 0
+a717
+Text Label -176350 -866050 0    60   ~ 0
+a718
+Text Label -176350 -865950 0    60   ~ 0
+a719
+Text Label -176350 -865850 0    60   ~ 0
+a720
+Text Label -176350 -865750 0    60   ~ 0
+a721
+Text Label -176350 -865650 0    60   ~ 0
+a722
+Text Label -176350 -865550 0    60   ~ 0
+a723
+Text Label -176350 -865450 0    60   ~ 0
+a724
+Text Label -176350 -865350 0    60   ~ 0
+a725
+Text Label -176350 -865250 0    60   ~ 0
+a726
+Text Label -176350 -865150 0    60   ~ 0
+a727
+Text Label -176350 -865050 0    60   ~ 0
+a728
+Text Label -176350 -864950 0    60   ~ 0
+a729
+Text Label -176350 -864850 0    60   ~ 0
+a730
+Text Label -176350 -864750 0    60   ~ 0
+a731
+Text Label -176350 -864650 0    60   ~ 0
+a732
+Text Label -176350 -864550 0    60   ~ 0
+a733
+Text Label -176350 -864450 0    60   ~ 0
+a734
+Text Label -176350 -864350 0    60   ~ 0
+a735
+Text Label -176350 -864250 0    60   ~ 0
+a736
+Text Label -176350 -864150 0    60   ~ 0
+a737
+Text Label -176350 -864050 0    60   ~ 0
+a738
+Text Label -176350 -863950 0    60   ~ 0
+a739
+Text Label -176350 -863850 0    60   ~ 0
+a740
+Text Label -176350 -863750 0    60   ~ 0
+a741
+Text Label -176350 -863650 0    60   ~ 0
+a742
+Text Label -176350 -863550 0    60   ~ 0
+a743
+Text Label -176350 -863450 0    60   ~ 0
+a744
+Text Label -176350 -863350 0    60   ~ 0
+a745
+Text Label -176350 -863250 0    60   ~ 0
+a746
+Text Label -176350 -863150 0    60   ~ 0
+a747
+Text Label -176350 -863050 0    60   ~ 0
+a748
+Text Label -176350 -862950 0    60   ~ 0
+a749
+Text Label -176350 -862850 0    60   ~ 0
+a750
+Text Label -176350 -862750 0    60   ~ 0
+a751
+Text Label -176350 -862650 0    60   ~ 0
+a752
+Text Label -176350 -862550 0    60   ~ 0
+a753
+Text Label -176350 -862450 0    60   ~ 0
+a754
+Text Label -176350 -862350 0    60   ~ 0
+a755
+Text Label -176350 -862250 0    60   ~ 0
+a756
+Text Label -176350 -862150 0    60   ~ 0
+a757
+Text Label -176350 -862050 0    60   ~ 0
+a758
+Text Label -176350 -861950 0    60   ~ 0
+a759
+Text Label -176350 -861850 0    60   ~ 0
+a760
+Text Label -176350 -861750 0    60   ~ 0
+a761
+Text Label -176350 -861650 0    60   ~ 0
+a762
+Text Label -176350 -861550 0    60   ~ 0
+a763
+Text Label -176350 -861450 0    60   ~ 0
+a764
+Text Label -176350 -861350 0    60   ~ 0
+a765
+Text Label -176350 -861250 0    60   ~ 0
+a766
+Text Label -176350 -861150 0    60   ~ 0
+a767
+Text Label -176350 -861050 0    60   ~ 0
+a768
+Text Label -176350 -860950 0    60   ~ 0
+a769
+Text Label -176350 -860850 0    60   ~ 0
+a770
+Text Label -176350 -860750 0    60   ~ 0
+a771
+Text Label -176350 -860650 0    60   ~ 0
+a772
+Text Label -176350 -860550 0    60   ~ 0
+a773
+Text Label -176350 -860450 0    60   ~ 0
+a774
+Text Label -176350 -860350 0    60   ~ 0
+a775
+Text Label -176350 -860250 0    60   ~ 0
+a776
+Text Label -176350 -860150 0    60   ~ 0
+a777
+Text Label -176350 -860050 0    60   ~ 0
+a778
+Text Label -176350 -859950 0    60   ~ 0
+a779
+Text Label -176350 -859850 0    60   ~ 0
+a780
+Text Label -176350 -859750 0    60   ~ 0
+a781
+Text Label -176350 -859650 0    60   ~ 0
+a782
+Text Label -176350 -859550 0    60   ~ 0
+a783
+Text Label -176350 -859450 0    60   ~ 0
+a784
+Text Label -176350 -859350 0    60   ~ 0
+a785
+Text Label -176350 -859250 0    60   ~ 0
+a786
+Text Label -176350 -859150 0    60   ~ 0
+a787
+Text Label -176350 -859050 0    60   ~ 0
+a788
+Text Label -176350 -858950 0    60   ~ 0
+a789
+Text Label -176350 -858850 0    60   ~ 0
+a790
+Text Label -176350 -858750 0    60   ~ 0
+a791
+Text Label -176350 -858650 0    60   ~ 0
+a792
+Text Label -176350 -858550 0    60   ~ 0
+a793
+Text Label -176350 -858450 0    60   ~ 0
+a794
+Text Label -176350 -858350 0    60   ~ 0
+a795
+Text Label -176350 -858250 0    60   ~ 0
+a796
+Text Label -176350 -858150 0    60   ~ 0
+a797
+Text Label -176350 -858050 0    60   ~ 0
+a798
+Text Label -176350 -857950 0    60   ~ 0
+a799
+Text Label -176350 -857850 0    60   ~ 0
+a800
+Text Label -176350 -857750 0    60   ~ 0
+a801
+Text Label -176350 -857650 0    60   ~ 0
+a802
+Text Label -176350 -857550 0    60   ~ 0
+a803
+Text Label -176350 -857450 0    60   ~ 0
+a804
+Text Label -176350 -857350 0    60   ~ 0
+a805
+Text Label -176350 -857250 0    60   ~ 0
+a806
+Text Label -176350 -857150 0    60   ~ 0
+a807
+Text Label -176350 -857050 0    60   ~ 0
+a808
+Text Label -176350 -856950 0    60   ~ 0
+a809
+Text Label -176350 -856850 0    60   ~ 0
+a810
+Text Label -176350 -856750 0    60   ~ 0
+a811
+Text Label -176350 -856650 0    60   ~ 0
+a812
+Text Label -176350 -856550 0    60   ~ 0
+a813
+Text Label -176350 -856450 0    60   ~ 0
+a814
+Text Label -176350 -856350 0    60   ~ 0
+a815
+Text Label -176350 -856250 0    60   ~ 0
+a816
+Text Label -176350 -856150 0    60   ~ 0
+a817
+Text Label -176350 -856050 0    60   ~ 0
+a818
+Text Label -176350 -855950 0    60   ~ 0
+a819
+Text Label -176350 -855850 0    60   ~ 0
+a820
+Text Label -176350 -855750 0    60   ~ 0
+a821
+Text Label -176350 -855650 0    60   ~ 0
+a822
+Text Label -176350 -855550 0    60   ~ 0
+a823
+Text Label -176350 -855450 0    60   ~ 0
+a824
+Text Label -176350 -855350 0    60   ~ 0
+a825
+Text Label -176350 -855250 0    60   ~ 0
+a826
+Text Label -176350 -855150 0    60   ~ 0
+a827
+Text Label -176350 -855050 0    60   ~ 0
+a828
+Text Label -176350 -854950 0    60   ~ 0
+a829
+Text Label -176350 -854850 0    60   ~ 0
+a830
+Text Label -176350 -854750 0    60   ~ 0
+a831
+Text Label -176350 -854650 0    60   ~ 0
+a832
+Text Label -176350 -854550 0    60   ~ 0
+a833
+Text Label -176350 -854450 0    60   ~ 0
+a834
+Text Label -176350 -854350 0    60   ~ 0
+a835
+Text Label -176350 -854250 0    60   ~ 0
+a836
+Text Label -176350 -854150 0    60   ~ 0
+a837
+Text Label -176350 -854050 0    60   ~ 0
+a838
+Text Label -176350 -853950 0    60   ~ 0
+a839
+Text Label -176350 -853850 0    60   ~ 0
+a840
+Text Label -176350 -853750 0    60   ~ 0
+a841
+Text Label -176350 -853650 0    60   ~ 0
+a842
+Text Label -176350 -853550 0    60   ~ 0
+a843
+Text Label -176350 -853450 0    60   ~ 0
+a844
+Text Label -176350 -853350 0    60   ~ 0
+a845
+Text Label -176350 -853250 0    60   ~ 0
+a846
+Text Label -176350 -853150 0    60   ~ 0
+a847
+Text Label -176350 -853050 0    60   ~ 0
+a848
+Text Label -176350 -852950 0    60   ~ 0
+a849
+Text Label -176350 -852850 0    60   ~ 0
+a850
+Text Label -176350 -852750 0    60   ~ 0
+a851
+Text Label -176350 -852650 0    60   ~ 0
+a852
+Text Label -176350 -852550 0    60   ~ 0
+a853
+Text Label -176350 -852450 0    60   ~ 0
+a854
+Text Label -176350 -852350 0    60   ~ 0
+a855
+Text Label -176350 -852250 0    60   ~ 0
+a856
+Text Label -176350 -852150 0    60   ~ 0
+a857
+Text Label -176350 -852050 0    60   ~ 0
+a858
+Text Label -176350 -851950 0    60   ~ 0
+a859
+Text Label -176350 -851850 0    60   ~ 0
+a860
+Text Label -176350 -851750 0    60   ~ 0
+a861
+Text Label -176350 -851650 0    60   ~ 0
+a862
+Text Label -176350 -851550 0    60   ~ 0
+a863
+Text Label -176350 -851450 0    60   ~ 0
+a864
+Text Label -176350 -851350 0    60   ~ 0
+a865
+Text Label -176350 -851250 0    60   ~ 0
+a866
+Text Label -176350 -851150 0    60   ~ 0
+a867
+Text Label -176350 -851050 0    60   ~ 0
+a868
+Text Label -176350 -850950 0    60   ~ 0
+a869
+Text Label -176350 -850850 0    60   ~ 0
+a870
+Text Label -176350 -850750 0    60   ~ 0
+a871
+Text Label -176350 -850650 0    60   ~ 0
+a872
+Text Label -176350 -850550 0    60   ~ 0
+a873
+Text Label -176350 -850450 0    60   ~ 0
+a874
+Text Label -176350 -850350 0    60   ~ 0
+a875
+Text Label -176350 -850250 0    60   ~ 0
+a876
+Text Label -176350 -850150 0    60   ~ 0
+a877
+Text Label -176350 -850050 0    60   ~ 0
+a878
+Text Label -176350 -849950 0    60   ~ 0
+a879
+Text Label -176350 -849850 0    60   ~ 0
+a880
+Text Label -176350 -849750 0    60   ~ 0
+a881
+Text Label -176350 -849650 0    60   ~ 0
+a882
+Text Label -176350 -849550 0    60   ~ 0
+a883
+Text Label -176350 -849450 0    60   ~ 0
+a884
+Text Label -176350 -849350 0    60   ~ 0
+a885
+Text Label -176350 -849250 0    60   ~ 0
+a886
+Text Label -176350 -849150 0    60   ~ 0
+a887
+Text Label -176350 -849050 0    60   ~ 0
+a888
+Text Label -176350 -848950 0    60   ~ 0
+a889
+Text Label -176350 -848850 0    60   ~ 0
+a890
+Text Label -176350 -848750 0    60   ~ 0
+a891
+Text Label -176350 -848650 0    60   ~ 0
+a892
+Text Label -176350 -848550 0    60   ~ 0
+a893
+Text Label -176350 -848450 0    60   ~ 0
+a894
+Text Label -176350 -848350 0    60   ~ 0
+a895
+Text Label -176350 -848250 0    60   ~ 0
+a896
+Text Label -175550 -895300 0    60   ~ 0
+a429
+Text Label -175550 -895200 0    60   ~ 0
+a430
+Text Label -175550 -895100 0    60   ~ 0
+a431
+Text Label -175550 -895000 0    60   ~ 0
+a432
+Text Label -175550 -894900 0    60   ~ 0
+a433
+Text Label -175550 -894800 0    60   ~ 0
+a434
+Text Label -175550 -894700 0    60   ~ 0
+a435
+Text Label -175550 -894600 0    60   ~ 0
+a436
+Text Label -175550 -894500 0    60   ~ 0
+a437
+Text Label -175550 -894400 0    60   ~ 0
+a438
+Text Label -175550 -894300 0    60   ~ 0
+a439
+Text Label -175550 -894200 0    60   ~ 0
+a440
+Text Label -175550 -894100 0    60   ~ 0
+a441
+Text Label -175550 -894000 0    60   ~ 0
+a442
+Text Label -175550 -893900 0    60   ~ 0
+a443
+Text Label -175550 -893800 0    60   ~ 0
+a444
+Text Label 9500 5050 2    60   ~ 0
+b1
+Text Label 9500 5150 2    60   ~ 0
+b2
+Text Label 9500 5250 2    60   ~ 0
+b3
+Text Label 9500 5350 2    60   ~ 0
+b4
+Text Label 9500 5450 2    60   ~ 0
+b5
+Text Label 9500 5550 2    60   ~ 0
+b6
+Text Label 9500 5650 2    60   ~ 0
+b7
+Text Label 9500 5750 2    60   ~ 0
+b8
+Text Label 9500 5850 2    60   ~ 0
+b9
+Text Label 9500 5950 2    60   ~ 0
+b10
+Text Label 9500 6050 2    60   ~ 0
+b11
+Entry Wire Line
+	8600 5000 8700 4900
+Entry Wire Line
+	8600 5100 8700 5000
+Entry Wire Line
+	8600 5200 8700 5100
+Entry Wire Line
+	8600 5300 8700 5200
+Entry Wire Line
+	8600 5400 8700 5300
+Entry Wire Line
+	8600 5500 8700 5400
+Entry Wire Line
+	8600 5600 8700 5500
+Entry Wire Line
+	8600 5700 8700 5600
+Entry Wire Line
+	8600 5800 8700 5700
+Entry Wire Line
+	8600 5900 8700 5800
+Entry Wire Line
+	8600 6000 8700 5900
+Entry Wire Line
+	9200 5150 9300 5050
+Entry Wire Line
+	9200 5250 9300 5150
+Entry Wire Line
+	9200 5350 9300 5250
+Entry Wire Line
+	9200 5450 9300 5350
+Entry Wire Line
+	9200 5550 9300 5450
+Entry Wire Line
+	9200 5650 9300 5550
+Entry Wire Line
+	9200 5750 9300 5650
+Entry Wire Line
+	9200 5850 9300 5750
+Entry Wire Line
+	9200 5950 9300 5850
+Entry Wire Line
+	9200 6050 9300 5950
+Entry Wire Line
+	9200 6150 9300 6050
+Wire Bus Line
+	8700 4800 8700 4900
+Wire Bus Line
+	8700 4900 8700 5000
+Wire Bus Line
+	8700 5000 8700 5100
+Wire Bus Line
+	8700 5100 8700 5200
+Wire Bus Line
+	8700 5200 8700 5300
+Wire Bus Line
+	8700 5300 8700 5400
+Wire Bus Line
+	8700 5400 8700 5500
+Wire Bus Line
+	8700 5500 8700 5600
+Wire Bus Line
+	8700 5600 8700 5700
+Wire Bus Line
+	8700 5700 8700 5800
+Wire Bus Line
+	8700 5800 8700 5900
+Wire Bus Line
+	9200 4800 8700 4800
+Wire Bus Line
+	9200 6150 9200 6050
+Wire Bus Line
+	9200 6050 9200 5950
+Wire Bus Line
+	9200 5950 9200 5850
+Wire Bus Line
+	9200 5850 9200 5750
+Wire Bus Line
+	9200 5750 9200 5650
+Wire Bus Line
+	9200 5650 9200 5550
+Wire Bus Line
+	9200 5550 9200 5450
+Wire Bus Line
+	9200 5450 9200 5350
+Wire Bus Line
+	9200 5350 9200 5250
+Wire Bus Line
+	9200 5250 9200 5150
+Wire Bus Line
+	9200 5150 9200 4800
+Wire Wire Line
+	9300 6050 9600 6050
+Wire Wire Line
+	9600 5950 9300 5950
+Wire Wire Line
+	9300 5850 9600 5850
+Wire Wire Line
+	9600 5750 9300 5750
+Wire Wire Line
+	9300 5650 9600 5650
+Wire Wire Line
+	9300 5550 9600 5550
+Wire Wire Line
+	9600 5450 9300 5450
+Wire Wire Line
+	9300 5350 9600 5350
+Wire Wire Line
+	9300 5250 9600 5250
+Wire Wire Line
+	9300 5150 9600 5150
+Wire Wire Line
+	9300 5050 9600 5050
+Wire Wire Line
+	8450 6000 8600 6000
+Wire Wire Line
+	8600 5900 8450 5900
+Wire Wire Line
+	8450 5800 8600 5800
+Wire Wire Line
+	8600 5700 8450 5700
+Wire Wire Line
+	8450 5600 8600 5600
+Wire Wire Line
+	8600 5500 8450 5500
+Wire Wire Line
+	8450 5400 8600 5400
+Wire Wire Line
+	8600 5300 8450 5300
+Wire Wire Line
+	8450 5200 8600 5200
+Wire Wire Line
+	8600 5100 8450 5100
+Wire Wire Line
+	8450 5000 8600 5000
+Wire Wire Line
+	7800 3000 7800 2850
+Wire Wire Line
+	7400 3000 7800 3000
+Wire Wire Line
+	6900 3000 7100 3000
+Wire Wire Line
+	6550 3000 6600 3000
+Wire Wire Line
+	6550 3300 6550 3000
+Wire Wire Line
+	6450 3300 6550 3300
+Wire Wire Line
+	6450 3400 6850 3400
+Wire Wire Line
+	5700 4950 5050 4950
+Wire Wire Line
+	6000 4950 6850 4950
+Wire Wire Line
+	5200 5050 5050 5050
+Wire Wire Line
+	5200 5100 5200 5050
+Wire Wire Line
+	5200 4850 5050 4850
+Wire Wire Line
+	5200 4800 5200 4850
+Wire Wire Line
+	4050 2850 4050 2650
+Wire Wire Line
+	3450 2850 3450 2650
+Wire Wire Line
+	4800 3300 5050 3300
+Wire Wire Line
+	4800 3200 4800 3300
+Wire Wire Line
+	4800 3900 5050 3900
+Wire Wire Line
+	4800 4000 4800 3900
+Text Label 9200 4950 0    60   ~ 0
+b[1..11]
+Text Label 8700 4850 2    60   ~ 0
+a[1..11]
+$EndSCHEMATC

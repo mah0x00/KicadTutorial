@@ -1,0 +1,6 @@
+Reference, Value, Footprint, Datasheet
+"R2","1k","Resistors_SMD:R_0603_HandSoldering",""
+"D1","LED_ALT","LEDs:LED_0603_HandSoldering",""
+"R1","100","Resistors_SMD:R_0603_HandSoldering",""
+"J1","Conn_01x03","Connectors_Molex:Molex_PicoBlade_53261-0371_03x1.25mm_Angled",""
+"U1","PIC12C508A-I/SN","Housings_SSOP:SSOP-8_2.95x2.8mm_Pitch0.65mm",""
